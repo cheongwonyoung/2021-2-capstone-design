@@ -9,23 +9,26 @@ import cv2
 import mediapipe as mp
 import math
 import numpy as np
-from google.protobuf.json_format import MessageToDict
+from google.protobuf.json_format import MessageToDict       # 왼손 오른 손을 구분하기 위한 텍스트를 변형하기위한 도구
 
 
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
-
+# 두 수를 비교하여 작은 값과 큰값을 구분한다. 
 def comp_int(num1, num2):
     if (num1 < num2):
         return int(num1), int(num2)
     else :
         return int(num2), int(num1)
     
-    
+# 인자로 들어온 배열을 좌표로 하여 원점을로부터 길이를 구한다. 넘파이 배일을 받아 다차원 연산이 기능하다. 
 def len_line(coord):
     return np.sqrt(np.sum(coord*coord))
+
+# 좌표의 회전이동 공식을 이용하여 현재 탐색한 손이 손바닥 부분인지 손등 부분인지 확인한다.
+# 손등의 경우 0 손바닥인 경우 1을 반환한다. 
 
 def isPalm(coord, hand_):
     mov_zero = coord - coord[0]
@@ -48,8 +51,8 @@ def isPalm(coord, hand_):
             return 0
     return 0
 
-finger_tip = [3,7,11,15,19]
-palm_point = [0,2 ,9, 17]
+finger_tip = [3,7,11,15,19] # 각 손가락의 끝부분을 리스트로 관리한다. 
+palm_point = [0,2 ,9, 17]   # 손바닥을 판단하기위한 4개의 좌표를 지정하여 리스트로 관리한다. 
 # For static images:
 IMAGE_FILES = ["./hand_img2.jpg","./hand_img3.jpg","./hand_img4.jpg","./hand_img5.jpg","./hand_img6.jpg","./hand2_img.jpg","./hand2_img2.jpg"]
 with mp_hands.Hands(
