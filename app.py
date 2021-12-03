@@ -328,7 +328,7 @@ def file_upload():
     if request.method == 'POST':
         f = request.files['chooseFile']
         f.save('./images/' + secure_filename(f.filename))
-        # f.save('D:/labs/capstone/images/' + f.filename)
+        
         files = os.listdir("./images/")
     return redirect('/')
 
@@ -348,15 +348,14 @@ def session_timeout() :
 
 if __name__ == "__main__" :
     dir_path = './'
-    # private_key_bytes = open(dir_path + 'private.pem', 'rb').read()
+
 
 
     app.config['SECRET_KEY'] = private_key_bytes
-#    app.config['SESSION_TYPE'] = 'filesystem'	
+
 
     #session.init_app(app)
-    # csrf_object = csrf.CSRFProtect()
-    # csrf_object.init_app(app)
+    
 
     app.run(host = '0.0.0.0', port = 80, debug = True)
 
