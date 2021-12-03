@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Roboto Slab -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Css -->
+  <link rel="stylesheet" href="/static/css/style.css?ver0001" />
+  <script src="/static/js/main.js?ver0003" defer></script>
+</head>
+
+<body>
+
+  {% if waring_message != "" %}
+    <script>
+      alert("{{ waring_message }}")
+    </script>
+  {% endif %}
+
+
+  <ul class="skipnavi">
+    <li><a href="#team">본문내용</a></li>
+  </ul>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar__logo">
+      <a href="/">
+        <img src="/static/imgs/navbar__logo 2.png" alt="TEAM BS">
+      </a>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__menu__item active" data-link="#home">HOME</li>
+      <li class="navbar__menu__item" data-link="#service">SERVICE</li>
+      <li class="navbar__menu__item" data-link="#about">ABOUT</li>
+      <li class="navbar__menu__item" data-link="#team">TEAM</li>
+    </ul>
+
+    <!-- Toggle Button -->
+    <button class="navbar__toggle-btn">
+      <i class="fas fa-bars ms-1"></i>
+    </button>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="home__container">
+      <h3 class="home__title"><i>" 쉽고 빠른 이미지 지문블러 처리 무료로 이용하세요 "</i></h3>
+      <h1 class="home__description">IT'S NICE TO MEET YOU</h1>
+      <button class="home__contact">CONTACT ME</button>
+    </div>
+  </section>
+
+  <!-- Service -->
+  <section id="service" class="section">
+    <div class="section__container">
+
+      <form id="form" method="post"  enctype="multipart/form-data">
+        <div class="service__content">
+          <label for="chooseFile" class="btn-upload">
+            <img src="/static/imgs/file_img4.png" alt="">
+            <p> 이미지를 선택하세요 </p>
+            <p>또는 이미지를 드래그하여 올려 놓으세요</p>
+          </label>
+          <input type="file" id="chooseFile" multiple="" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+        </div>
+      </form>
+
+      <div class="service__file">
+        <div class="service__file-input">
+          <p>FILE NAME: </p>
+          <p id="fileName"></p>
+        </div>
+        <div class="service__btn">
+          <button type="submit" form="form" class="submitButton" id="submitButton">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="service__upload">
+    <div class="image-upload" id="image-upload">
+    </div>
+    <div class="image-show" id="image-show"></div>
+  </div>
+  {% if file_path != "" %}
+    {% if waring_message == "" %}
+
+    <div class="download__container">
+      <!-- <button type="button"><a href = "/static/output_images/0_ellipes.png" download = "temp" class="ellipes_download">ellipes download</a></button>
+      <br> -->
+      <button type="button"><a href = "{{ file_path }}" download = "temp" class="final_download_kyeong">download</a></button>
+    </div>
+    {% endif %}
+  {% endif %}
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section__container">
+      <h2 class="about__title">ABOUT</h2>
+      <h3 class="about__description">기계학습을 이용한 고해상도 이미지 생체인식 보안사고 예방</h3>
+      <div class="about__RD-background">
+        <h3 class="rd-background">연구개발배경</h3>
+        <p class="rd-background__text" style="letter-spacing: 1px";><br />우리는 인터넷과 스마트폰의 발전을 통해 공간의 제약을 받지 않고 언제 어디서나 손쉽게 SNS를 통해 개인의 일상 등을 사진을 통해
+          다른 사람들에게 공유할 수 있습니다.<br /><br /> 그러나 나날이 발전해가는 스마트폰과 각종 카메라의 해상도 기술로 인해 일상의 사진을 통해서도 지문을 채취해내어 이를 악용할 수 있다는
+          가능성을 고려했고<br /><br />이를 예방하기 위해서 이 프로젝트를 진행하게 되었습니다.</p>
+      </div>
+      <div class="about__RD-goal">
+        <h3 class="rd-goal">목표</h3>
+        <p class="rd-goal__text" style="letter-spacing: 1px"; >1. 생체 인식 보안사고를 예방한다.<br /><br />
+          이미지에서 보일 수 있는 지문부분을 인식 불가능하도록 하여 보안사고를 예방하고자 한다.<br />
+          이미지에서 생체 인식을 불가능하게 할 때 원본 이미지에서의 손상을 최소화시키는 것을 목표로 한다.<br /><br />
+          2. 해당 기술을 웹사이트로 운영한다.<br /><br />
+          해당 생체 인식 예방 기술을 웹사이트에 접목하여 누구나 시간 장소에 구애받지 않고 이용할 수 있도록 한다.<br /><br />
+          3. 추후 앱으로의 발전</p>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section">
+    <div class="section__container">
+      <div class="team__text__box">
+        <h2 class="team__title">OUR AMAZING TEAM</h2>
+        <h3>BS (Biometric Security)</h3>
+        <h3 class="team__description">한림대학교 소프트웨어융합대학 빅데이터전공 17학번 3학년 학생 4명으로 이루어진 캡스톤디자인 팀 입니다.</h3>
+      </div>
+      <div class="team__row">
+        <div class="member__container">
+          <div class="team__member">
+            <img src="/static/imgs/ham.jpg" alt="#" class="team__member__seungwan" />
+            <h4>seungwanHam / 함승완</h4>
+            <p class="text-muted">빅데이터 전공 / 20175172</p>
+            <a class="social__btn" href="mailto:seungwan7511@gmail.com" target="_blank"><i class="fa fa-google"></i></a>
+            <a class="social__btn" href="https://github.com/seungwanHam" target="_blank"><i class="fab fa-github"></i></a>
+            <p>프론트엔드</p>
+          </div>
+
+          <div class="team__member">
+            <img src="/static/imgs/kim.jpg" alt="#" class="team__member__seungwan" />
+            <h4>jaehwanKim / 김재환</h4>
+            <p class="text-muted">빅데이터 전공 / 20175123</p>
+            <a class="social__btn" href="mailto:rfkjh22@naver.com" target="_blank"><i class="fa fa-google"></i></a>
+            <a class="social__btn" href="https://github.com/KimJaeHwan" target="_blank"><i class="fab fa-github"></i></a>
+            <p>지문 처리</p>
+          </div>
+
+          <div class="team__member">
+            <img src="/static/imgs/baek.jpg" alt="#" class="team__member__seungwan" />
+            <h4>keongminBaek / 백경민</h4>
+            <p class="text-muted">빅데이터 전공 / 20175135</p>
+            <a class="social__btn" href="mailto:bag0437@naver.com" target="_blank"><i class="fa fa-google"></i></a>
+            <a class="social__btn" href="https://github.com/korea3500" target="_blank"><i class="fab fa-github"></i></a>
+            <p>백엔드</p>
+          </div>
+
+          <div class="team__member">
+            <img src="/static/imgs/jeong.jpg" alt="#" class="team__member__seungwan" />
+            <h4>wonyeongJeong / 정원영</h4>
+            <p class="text-muted">빅데이터 전공 / 20175162</p>
+            <a class="social__btn" href="mailto:kaka491@naver.com" target="_blank"><i class="fa fa-google"></i></a>
+            <a class="social__btn" href="https://github.com/cheongwonyoung" target="_blank"><i class="fab fa-github"></i></a>
+            <p>지문 처리</p>
+          </div>
+        </div>
+        <!-- <div class="team__member__description">
+          <p>2021년 8월 29일 주제를 정한뒤 지문보안 사고에 대한 사고사례를 수집하였습니다.<br/ ></p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer" class="section">
+    <div class="section__container">
+      <div class="row align-items-center">
+        <div class="copyright">2021 HALLYM UNIVERSITY CAPSTONE DESIGN</div>
+        <!-- <div class="footer__btn">
+          <a class="footer__btn" href="#!"><i class="fab fa-facebook-f"></i></a>
+          <a class="footer__btn" href="#!"><i class="fa fa-google"></i></a>
+          <a class="footer__btn" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer__link">
+          <a class="footer__link-privacy__policy" href="#!">Privacy Policy</a>
+          <a class="footer__link-terms__or__use" href="#!">Terms of Use</a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Arrow up -->
+  <button class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+</body>
+
+</html>
