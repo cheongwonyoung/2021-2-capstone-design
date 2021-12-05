@@ -22,11 +22,11 @@
 
 - 오픈소스 MediaPipe의 hand detection이용하여 손가락 탐지
   <br></br>
-  ![chip.PNG](https://google.github.io/mediapipe/images/logo_horizontal_color.png)
+  ![chip.PNG](https://google.github.io/mediapipe/images/logo_horizontal_color.png){: width="100" height="100"}
   <br></br>
 - 손바닥, 손등 구별
   <br></br>
-  ![silhum.PNG](./imgs/detect.PNG)
+  ![silhum.PNG](./imgs/detect.PNG){: width="100" height="100"}
   <br></br>
 - 손가락 접힘여부 판별
   <br></br>
@@ -40,7 +40,7 @@
   <br></br>
 - 검은색 타원 영역에 블러처리된 지문영역을 넣어 블러처리 결과를 생성
   <br></br>
-  ![blur.PNG](./imgs/blur.PNG)
+  ![blur.PNG](./imgs/blur.PNG){: width="100" height="100"}
 
 ---
 
@@ -48,16 +48,16 @@
 
 - PC
   <br></br>
-  ![pc.PNG](./imgs/pc.PNG)
+  ![pc.PNG](./imgs/pc.PNG){: width="100" height="100"}
 
 - MOBILE
   <br></br>
-  ![mobile.PNG](./imgs/mobile.PNG)
+  ![mobile.PNG](./imgs/mobile.PNG){: width="100" height="100"}
 
 - 배포
   <br></br>
-  ![배포.PNG](https://blog.kakaocdn.net/dn/l8Hkt/btqEzeUzi79/9lbAN6lw803rD6mwPDACr0/img.png)
-  ![배포.PNG](https://media.vlpt.us/images/new_wisdom/post/4a0259ee-b980-484b-8bf4-25eb4705459f/flask.png)
+  ![배포.PNG](https://blog.kakaocdn.net/dn/l8Hkt/btqEzeUzi79/9lbAN6lw803rD6mwPDACr0/img.png){: width="100" height="100"}
+  ![배포.PNG](https://media.vlpt.us/images/new_wisdom/post/4a0259ee-b980-484b-8bf4-25eb4705459f/flask.png){: width="100" height="100"}
 
 ---
 
