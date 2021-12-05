@@ -48,11 +48,11 @@
 
 - PC
   <br></br>
-  ![pc.PNG](./imgs/pc.PNG){: width="100" height="100"}
+  ![pc.PNG](./imgs/pc.png){: width="100" height="100"}
 
 - MOBILE
   <br></br>
-  ![mobile.PNG](./imgs/mobile.PNG){: width="100" height="100"}
+  ![mobile.PNG](./imgs/mobile.png){: width="100" height="100"}
 
 - 배포
   <br></br>
