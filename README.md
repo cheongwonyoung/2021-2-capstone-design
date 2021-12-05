@@ -26,7 +26,7 @@
   <br></br>
 - 손바닥, 손등 구별
   <br></br>
-  <img src="./imgs.detect.png" width="500" height="200" />
+  <img src="./imgs/detect.png" width="500" height="200" />
   <br></br>
 - 손가락 접힘여부 판별
 
