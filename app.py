@@ -23,12 +23,6 @@ from google.protobuf.json_format import MessageToDict
 import logging
 
 from werkzeug.utils import redirect
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct  2 19:27:12 2021
-
-@author: rfkjh
-"""
 
 
 
@@ -318,9 +312,9 @@ def index():
     else :
         return render_template('/index.html', file_path = file_path, waring_message = waring_message)
 
-@app.route('/test')       #메인 도메인 라우트
-def index_old():
-    return render_template('/index_old.html')
+# @app.route('/test')    
+# def index_old():
+#     return render_template('/index_old.html')
 
 
 @app.route('/upload' , methods = ['GET', 'POST'])
