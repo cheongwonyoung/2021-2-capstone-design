@@ -22,7 +22,7 @@
 
 - 오픈소스 MediaPipe의 hand detection이용하여 손가락 탐지
   <br></br>
-  <img src="[https://google.github.io/mediapipe/images/logo_horizontal_color.png](https://www.google.com/imgres?imgurl=https%3A%2F%2Fdevelopers.google.com%2Fstatic%2Fmediapipe%2Fimages%2Fsolutions%2Fhand-landmarks.png&tbnid=JntrWWUSgmurWM&vet=12ahUKEwiGzoGeu5r_AhVFCd4KHa1OCiQQMygAegUIARDIAQ..i&imgrefurl=https%3A%2F%2Fdevelopers.google.com%2Fmediapipe%2Fsolutions%2Fvision%2Fhand_landmarker&docid=-Izit7UYNdub-M&w=2146&h=744&q=mediapipe%20hand&ved=2ahUKEwiGzoGeu5r_AhVFCd4KHa1OCiQQMygAegUIARDIAQ)" width="500" height="200" />
+  <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fdevelopers.google.com%2Fstatic%2Fmediapipe%2Fimages%2Fsolutions%2Fhand-landmarks.png&tbnid=JntrWWUSgmurWM&vet=12ahUKEwiGzoGeu5r_AhVFCd4KHa1OCiQQMygAegUIARDIAQ..i&imgrefurl=https%3A%2F%2Fdevelopers.google.com%2Fmediapipe%2Fsolutions%2Fvision%2Fhand_landmarker&docid=-Izit7UYNdub-M&w=2146&h=744&q=mediapipe%20hand&ved=2ahUKEwiGzoGeu5r_AhVFCd4KHa1OCiQQMygAegUIARDIAQ" width="500" height="200" />
   <br></br>
 - 손바닥, 손등 구별
   <br></br>
